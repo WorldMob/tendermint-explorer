@@ -12,6 +12,7 @@ let markdown = require("markdown-it")({
   preprocess: (markdownIt, source) => source
 })
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/tendermint-explorer/" : "/",
   chainWebpack: config => {
     config.resolve.alias
       .set("assets", resolve("src/assets"))
