@@ -25,7 +25,7 @@ import PartTxData from './PartTxData'
 import { TmListItem, TmPage, TmPart, TmToolBar } from "@tendermint/ui"
 
 export default {
-  name: "page-block",
+  name: "page-tx",
   components: {
     TmToolBar,
     TmListItem,
@@ -49,7 +49,7 @@ export default {
       let { tx, height } = this
       if (!tx) return
 
-      let txObj = decodeTx(tx)
+      let txObj = tx;
       let txHash = this.hash
       let block = {
         isRouterLink: true,
@@ -68,10 +68,14 @@ export default {
   }),
   methods: {
     async fetchTx() {
+      console.log(this.hash)
       this.jsonUrl = `${this.blockchain.rpc}/tx?hash=0x${this.hash}`
+      console.log(this.jsonUrl)
       let json = await axios.get(this.jsonUrl)
+      console.log(json.data.result)
       this.height = json.data.result.height
-      this.tx = json.data.result.tx
+      console.log(json.data.result.tx)
+      this.tx = json.data.result
     },
   },
   async mounted() {

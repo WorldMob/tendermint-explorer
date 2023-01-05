@@ -81,7 +81,7 @@ export default {
     },
     decodedTxs () {
       return this.block.data.txs.map((tx, i) => {
-        let txObj = decodeTx(tx)
+        let txObj = tx
         let hash = this.txHash(i)
         let txHash = {
           isRouterLink: true,

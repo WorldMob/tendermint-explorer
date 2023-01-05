@@ -2,11 +2,11 @@
 tm-page(title=process.env.VUE_APP_NETWORK)
   tm-part(title='Testnet Data')
     tm-list-item(dt='Testnet Version' :dd='bc.status.node_info.network')
-    // tm-list-item(dt='Tendermint Version' :dd='bc.status.node_info.version')
+    tm-list-item(dt='Tendermint Version' :dd='bc.status.node_info.version')
     tm-list-item(dt='Status' :dd='validatorsActive' :href="`${bc.rpc}/consensus_state`" target="_blank")
-    tm-list-item(dt='Prevote State' :dd='prevotes')
-    tm-list-item(dt='Precommit State' :dd='precommits')
-    tm-list-item(dt='Total Transactions' :dd='num.prettyInt(totalTxs)')
+    //tm-list-item(dt='Prevote State' :dd='prevotes')
+    //tm-list-item(dt='Precommit State' :dd='precommits')
+    //tm-list-item(dt='Total Transactions' :dd='num.prettyInt(totalTxs)')
 
   tm-part(title='Current Block' v-if="latestBlock.height > 0")
     tm-list-item(dt='Block Height' :dd='num.prettyInt(latestBlock.height)'
@@ -21,12 +21,12 @@ tm-page(title=process.env.VUE_APP_NETWORK)
     tm-list-item(dt='Block Time' dd='No blocks yet')
     tm-list-item(dt='Last Commit Hash' dd='N/A')
 
-  tm-part(title='Connected To')
-    tm-list-item(dt='RPC Endpoint')
-      div(slot="dd")
-        tm-field.node-input(
-          type="text"
-          v-model="bc.rpc")
+  //- tm-part(title='Connected To')
+  //-   tm-list-item(dt='RPC Endpoint')
+  //-     div(slot="dd")
+  //-       tm-field.node-input(
+  //-         type="text"
+  //-         v-model="bc.rpc")
 
 </template>
 

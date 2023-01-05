@@ -13,7 +13,9 @@ export const decodeBase64 = (str, encoding = 'utf-8') => {
 }
 
 export const decodeTx = (base64str) => {
+  console.log(base64str)
   let str = decodeBase64(base64str)
+  console.log(str)
   let idx = str.indexOf('{')
   let json = str.substring(idx)
   return JSON.parse(json)

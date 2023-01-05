@@ -5,6 +5,7 @@ Vue.use(Router)
 
 import Index from "../components/PageIndex"
 import Search from "../components/PageSearch"
+import TxSearch from "../components/PageTxSearch"
 import Blocks from "../components/PageBlocks"
 import Block from "../components/PageBlock"
 import Tx from "../components/PageTx"
@@ -18,6 +19,7 @@ import PageValidator from "../components/PageValidator"
 const routes = [
   { path: "/", component: Index },
   { path: "/search", component: Search },
+  { path: "/txsearch", component: TxSearch },
   { path: "/blocks", component: Blocks },
   { path: "/blocks/:block", name: "block", component: Block },
   { path: "/tx/:hash", name: "tx", component: Tx }, // TODO rename path to /txs

@@ -11,9 +11,7 @@ let markdown = require("markdown-it")({
   linkify: true,
   preprocess: (markdownIt, source) => source
 })
-module.exports = {
-  publicPath: '/tendermint-explorer/',
-  
+module.exports = { 
   chainWebpack: config => {
     config.resolve.alias
       .set("assets", resolve("src/assets"))
