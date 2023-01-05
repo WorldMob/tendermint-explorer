@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Heimdall Explorer</title>
+<title>Explorer</title>
 <meta name=viewport content="width=device-width, user-scalable=no">
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<div id="app">
+<!-- <div id="app">
   <div id="load">
     <div id="load-container">
       <div id="load-title">Heimdall Explorer</div>
@@ -13,13 +13,26 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <script>
     if (!Object.defineProperty) {
         window.alert('Heimdall Explorer does not support Internet Explorer 8 and below. Please update your browser to a modern version of Chrome, Firefox, or Safari.')
     }
 </script> -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+
+  <!-- HTML Meta Tags -->
+  <title>Explorer</title>
+  <meta name="msapplication-TileColor" content="#da532c">
   <!-- Start Single Page Apps for GitHub Pages -->
   <script type="text/javascript">
     (function (l) {
@@ -40,10 +53,30 @@
     }(window.location))
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
+</head>
 
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
 
 <style>
-  body { margin: 0; }
+  body {
+    margin: 0;
+  }
+
   #load {
     display: flex;
     align-items: center;
@@ -52,6 +85,7 @@
     height: 100vh;
     background: #000;
   }
+
   #load-container {
     font: 16px/1.5 system, -apple-system, BlinkMacSystemFont, "Roboto", "Seogue UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     color: #fff;
@@ -65,23 +99,27 @@
     justify-content: center;
     box-sizing: border-box;
   }
+
   #load-title {
     font-size: 1.5rem;
     line-height: 3;
     font-weight: 500;
     width: 100%;
   }
+
   #load-main p {
     font-size: 1rem;
     font-weight: 300;
     color: #ccc;
     margin-bottom: 1em;
   }
+
   #load-main p.green {
-    color: hsl(210,50%,50%);
+    color: hsl(210, 50%, 50%);
   }
+
   #load-main a {
     text-decoration: none;
-    color: hsl(210,50%,50%);
+    color: hsl(210, 50%, 50%);
   }
 </style>
