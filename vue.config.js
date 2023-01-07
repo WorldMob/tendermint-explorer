@@ -12,6 +12,9 @@ let markdown = require("markdown-it")({
   preprocess: (markdownIt, source) => source
 })
 module.exports = { 
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   chainWebpack: config => {
     config.resolve.alias
       .set("assets", resolve("src/assets"))
