@@ -52,11 +52,11 @@ export default {
       this.query = value
     },
     search() {
-      if (parseInt(this.query)) {
+      // if (parseInt(this.query)) {
         this.$router.push({ name: "tx", params: { hash: this.query } })
-      } else {
-        console.log("Only # queries are supported right now", this.query)
-      }
+      // } else {
+      //   console.log("Only # queries are supported right now", this.query)
+      // }
     }
   }
 }

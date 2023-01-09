@@ -47,6 +47,7 @@ export default {
 <style lang="stylus">
   .tm-part
     max-width 100%
+    overflow auto
   .tm-part-main
    padding-right 0
   .tm-part-title
